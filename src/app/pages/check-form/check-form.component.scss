@@ -1,0 +1,153 @@
+.title {
+  margin-bottom: 1.25em;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.375rem;
+  text-align: center;
+  color: #3A444E;
+}
+
+input[placeholder] {
+  text-align: center;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+  background-color: #F5F7F8;
+  border-radius: 1.875em;
+
+  .form__input {
+    margin-left: 1.625em;
+    margin-bottom: 0.875em;
+    width: 248px;
+    height: 52px;
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+
+  .error {
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 0.875rem;
+    color: #F33F18;
+    margin-left: 1.875em;
+    margin-bottom: 0.6875em;
+  }
+
+  .form__confirm {
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 0.875rem;
+    margin-bottom: 2.4825em;
+    margin-left: 1.625em;
+  }
+
+  .accent__letter {
+    color: #00529B;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 0.875rem;
+    text-decoration: underline;
+  }
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltip .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #000;
+    color: #FFF;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+  }
+
+  .tooltip:hover .tooltip-text {
+    visibility: visible;
+  }
+
+  .submit {
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 0.875rem;
+    text-align: center;
+  }
+}
+
+.services__menu {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 0.875rem;
+  margin: 1em 0.75em 1.8125em 0.75em;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.08);
+  border-radius: 100px;
+  background-color: #FFF;
+  width: 260px;
+  height: 40px;
+
+  .services__list {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+  }
+
+  .active{
+    color: #FFF;
+  }
+
+  .services__item:hover {
+    width: 50%;
+    background: linear-gradient(292.85deg, #3A444E 1.13%, rgba(58, 68, 78, 0.78) 98.35%);
+    border-radius: 100px;
+    text-align: center;
+  }
+
+  .service__link {
+    display: block;
+    margin: 1em 0.75em 1.8125em 0.75em;
+    color: #3A444E;
+
+    &:hover {
+      color: #FFF;
+    }
+  }
+}
+
+.btn {
+  background-color: #00B1AB;
+  height: 52px;
+  width: 87.32%;
+  border-radius: 42px;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.1875rem;
+  text-align: center;
+  color: #FFF;
+  margin-bottom: 1.125em;
+  transition: .5s;
+
+  &:hover {
+    background: linear-gradient(180deg, #00B1AB 0%, #00827D 100%);
+  }
+
+  &:disabled {
+    background-color: #D0D5DB;
+  }
+}
+
+
+

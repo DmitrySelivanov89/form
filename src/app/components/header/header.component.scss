@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25em;
+  border-bottom: 1px solid #D0D5DB80;
+
+  .header__menu {
+    margin: 0.75em 1em;
+  }
+
+  .header__logo {
+    margin: 0.67em 0.75em;
+  }
+}

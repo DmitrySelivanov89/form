@@ -39,3 +39,12 @@ ol,
 li {
   list-style: none;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 284px;
+  margin: 0 auto;
+  min-height: 100%;
+  overflow: hidden;
+}

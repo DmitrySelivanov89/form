@@ -1,0 +1,39 @@
+<app-header></app-header>
+<main class="container main">
+  <h1 class="title">Проверка счета</h1>
+  <form [formGroup]="checkFormGroupControl" (ngSubmit)="onSubmit()" class="form">
+    <!--    {{checkFormGroupControl.value | json }}-->
+    <nav class="services__menu">
+      <ul class="services__list">
+        <li class="services__item"><a routerLinkActive="active" routerLink="about" href="#" class="service__link ">О
+          сервисе</a></li>
+        <li class="services__item">
+          <a routerLinkActive="active" routerLink="check" [routerLinkActiveOptions]="{exact: true}" href="#"
+             class="service__link active">
+            Проверить счет
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <label>
+      <input formControlName="bic" class="form__input bic" type="number" placeholder="БИК">
+    </label>
+    <label>
+      <input formControlName="paymentAccount" class="form__input payment-account" type="number"
+             placeholder="Расчётный счёт">
+    </label>
+    <span *ngIf="checkFormGroupControl.valid" class="error">Указан неверный номер счета!</span>
+    <label class="form__confirm">
+      <input formControlName="accept" required type="checkbox">
+      Согласен с
+      <div class="tooltip">
+        <span class="accent__letter">условиями</span>
+        <span class="tooltip-text terms">{{tooltipText}}</span>
+      </div>
+    </label>
+    <label class="submit">
+      <input [disabled]="checkFormGroupControl.invalid" class="btn " type="submit" value="Проверить">
+    </label>
+  </form>
+</main>
+<app-footer></app-footer>

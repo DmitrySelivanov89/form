@@ -1,0 +1,33 @@
+.footer {
+  background-color: #F5F7F8;
+  padding: 28px 18px;
+  margin-bottom: 1em;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+  margin-left: 1em;
+
+  &__phone {
+    margin-bottom: 0.25em;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #3A444E;
+  }
+
+  &__info {
+    margin-bottom: 1em;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    word-break: break-all;
+  }
+}
+
+.copyright {
+  color: #3A444E;
+  margin-bottom: 1.75em;
+  margin-left: 1.125em;
+}
