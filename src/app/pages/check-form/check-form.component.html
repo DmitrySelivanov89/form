@@ -5,26 +5,25 @@
     <!--    {{checkFormGroupControl.value | json }}-->
     <nav class="services__menu">
       <ul class="services__list">
-        <li class="services__item"><a routerLinkActive="active" routerLink="about" href="#" class="service__link ">О
-          сервисе</a></li>
+        <li class="services__item"><a routerLinkActive="active" routerLink="/about" href="#" class="service__link ">
+          О сервисе</a></li>
         <li class="services__item">
-          <a routerLinkActive="active" routerLink="check" [routerLinkActiveOptions]="{exact: true}" href="#"
+          <a routerLinkActive="active" routerLink="/check" [routerLinkActiveOptions]="{exact: true}" href="#"
              class="service__link active">
-            Проверить счет
-          </a>
-        </li>
+            Проверить счет</a></li>
       </ul>
     </nav>
     <label>
-      <input formControlName="bic" class="form__input bic" type="number" placeholder="БИК">
+      <input formControlName="bic" class="form__input bic" type="number" required placeholder="БИК">
     </label>
     <label>
-      <input formControlName="paymentAccount" class="form__input payment-account" type="number"
+      <input formControlName="paymentAccount" class="form__input payment-account" type="number" required
              placeholder="Расчётный счёт">
     </label>
-    <span *ngIf="checkFormGroupControl.valid" class="error">Указан неверный номер счета!</span>
+    <span *ngIf="!checkFormGroupControl.valid && (checkFormGroupControl.dirty || checkFormGroupControl.touched )"
+          class="error">Указан неверный номер счета!</span>
     <label class="form__confirm">
-      <input formControlName="accept" required type="checkbox">
+      <input class="form__checkbox" formControlName="accept" type="checkbox" required>
       Согласен с
       <div class="tooltip">
         <span class="accent__letter">условиями</span>

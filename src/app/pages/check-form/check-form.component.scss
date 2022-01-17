@@ -8,8 +8,16 @@
 }
 
 input[placeholder] {
-  text-align: center;
+  padding-bottom: 2em;
+  padding-left: 1em;
 }
+
+//input:before{
+//  position: absolute;
+//  content: 'Бик';
+//  top: 5px;
+//  right: 5px;
+//}
 
 .main {
   flex: 1 1 auto;
@@ -46,6 +54,12 @@ input[placeholder] {
     line-height: 0.875rem;
     margin-bottom: 2.4825em;
     margin-left: 1.625em;
+  }
+
+  .form__checkbox {
+    display: inline-block;
+    position: relative;
+    top: 0.125em;
   }
 
   .accent__letter {
@@ -99,31 +113,25 @@ input[placeholder] {
   width: 260px;
   height: 40px;
 
+
   .services__list {
     display: flex;
     justify-content: space-between;
-    height: 40px;
+    height: inherit;
   }
 
-  .active {
-    color: #FFF;
-  }
-
-  .services__item:hover {
-    width: 50%;
+  .services__item .active {
     background: linear-gradient(292.85deg, #3A444E 1.13%, rgba(58, 68, 78, 0.78) 98.35%);
     border-radius: 100px;
     text-align: center;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.08);
+    color: #FFF;
   }
 
   .service__link {
     display: block;
-    margin: 1em 0.75em 1.8125em 0.75em;
+    padding: 12px 24px;
     color: #3A444E;
-
-    &:hover {
-      color: #FFF;
-    }
   }
 }
 
