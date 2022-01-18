@@ -1,7 +1,6 @@
 .footer {
   background-color: #F5F7F8;
-  padding: 28px 18px;
-  margin-bottom: 1em;
+  padding: 1.75em 1.125em;
 }
 
 .contacts {
@@ -19,15 +18,13 @@
 
   &__info {
     margin-bottom: 1em;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 400;
-    line-height: 14px;
-    word-break: break-all;
+    line-height: 0.875rem;
   }
 }
 
 .copyright {
   color: #3A444E;
-  margin-bottom: 1.75em;
   margin-left: 1.125em;
 }
