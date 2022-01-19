@@ -2,7 +2,6 @@
 <main class="container main">
   <h1 class="title">Проверка счета</h1>
   <form [formGroup]="checkForm" (ngSubmit)="onSubmit()" class="form">
-    {{checkForm.value | json }}
     <nav class="services__menu">
       <ul class="services__list">
         <li class="services__item"><a routerLinkActive="active" routerLink="/about" href="#" class="service__link ">
@@ -17,14 +16,15 @@
       <input formControlName="bic" class="form__input bic" placeholder="БИК">
     </label>
     <ng-container *ngIf=" checkForm.get('bic') as bicCtrl">
-      <span *ngIf=" bicCtrl.invalid && (bicCtrl.dirty || bicCtrl.touched )" class="error">{{bicCtrl.errors?.bic?.message}}
+      <span *ngIf=" bicCtrl.invalid && (bicCtrl.dirty || bicCtrl.touched )"
+            class="error">{{bicCtrl.errors?.bic?.message}}
       </span>
     </ng-container>
-    <label>
-      <input formControlName="paymentAccount" class="form__input payment-account" placeholder="Расчётный счёт">
-    </label>
-    <span *ngIf="checkForm.invalid && (checkForm.dirty || checkForm.touched )"
-          class="error">Указан неверный номер счета!</span>
+    <label class="payment__placeholder"></label>
+    <input formControlName="paymentAccount" class="form__input payment-account" placeholder="Расчетный счет">
+    <ng-container>
+      <span *ngIf="checkForm.invalid && (checkForm.dirty || checkForm.touched )" class="error">Указан неверный номер счета!</span>
+    </ng-container>
     <label class="form__confirm">
       <input formControlName="accept" class="form__checkbox" type="checkbox">
       Согласен с

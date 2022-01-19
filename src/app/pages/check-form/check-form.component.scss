@@ -8,9 +8,21 @@
 }
 
 input[placeholder] {
-  padding-bottom: 2em;
   padding-left: 1em;
 }
+
+//
+//input[placeholder]:placeholder-shown{
+//    content: 'Бик';
+//    top: 5px;
+//    left: 5px;
+//}
+//.payment-account {
+//  font-size: 0.875rem;
+//  font-weight: 400;
+//  line-height: 12px;
+//  display: block;
+//}
 
 .btn {
   background-color: #00B1AB;
@@ -34,13 +46,6 @@ input[placeholder] {
     pointer-events: none;
   }
 }
-
-//input:before {
-//  position: absolute;
-//  content: 'Бик';
-//  top: 5px;
-//  right: 5px;
-//}
 
 .main {
   flex: 1 1 auto;
@@ -118,13 +123,6 @@ input[placeholder] {
   .tooltip:hover .tooltip-text {
     visibility: visible;
   }
-
-  //.submit {
-  //  font-size: 0.75rem;
-  //  font-weight: 700;
-  //  line-height: 0.875rem;
-  //  text-align: center;
-  //}
 }
 
 .services__menu {
