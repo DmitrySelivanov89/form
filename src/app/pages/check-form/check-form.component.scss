@@ -12,6 +12,29 @@ input[placeholder] {
   padding-left: 1em;
 }
 
+.btn {
+  background-color: #00B1AB;
+  height: 52px;
+  width: 87.32%;
+  border-radius: 42px;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.1875rem;
+  text-align: center;
+  color: #FFF;
+  margin-bottom: 0.9375em;
+  margin-left: 1.5em;
+
+  &:hover {
+    background: linear-gradient(180deg, #00B1AB 0%, #00827D 100%);
+  }
+
+  &:disabled {
+    background-color: #D0D5DB;
+    pointer-events: none;
+  }
+}
+
 //input:before {
 //  position: absolute;
 //  content: 'Бик';
@@ -96,12 +119,12 @@ input[placeholder] {
     visibility: visible;
   }
 
-  .submit {
-    font-size: 0.75rem;
-    font-weight: 700;
-    line-height: 0.875rem;
-    text-align: center;
-  }
+  //.submit {
+  //  font-size: 0.75rem;
+  //  font-weight: 700;
+  //  line-height: 0.875rem;
+  //  text-align: center;
+  //}
 }
 
 .services__menu {
@@ -114,7 +137,6 @@ input[placeholder] {
   background-color: #FFF;
   width: 260px;
   height: 40px;
-
 
   .services__list {
     display: flex;
@@ -137,27 +159,7 @@ input[placeholder] {
   }
 }
 
-.btn {
-  background-color: #00B1AB;
-  height: 52px;
-  width: 87.32%;
-  border-radius: 42px;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.1875rem;
-  text-align: center;
-  color: #FFF;
-  margin-bottom: 1.125em;
-  transition: .5s;
 
-  &:hover:enabled {
-    background: linear-gradient(180deg, #00B1AB 0%, #00827D 100%);
-  }
-
-  &:disabled {
-    background-color: #D0D5DB;
-  }
-}
 
 
 

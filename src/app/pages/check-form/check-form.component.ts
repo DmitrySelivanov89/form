@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { validateBic, validateRsFactory } from '../../shared/validators';
 
 @Component({
   selector: 'app-check-form',
@@ -7,43 +8,36 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./check-form.component.scss']
 })
 export class CheckFormComponent implements OnInit {
-
-  tooltipText = 'Здесь могли быть ваши условия, но их нет!'
-  checkFormGroupControl: FormGroup;
+  tooltipText = 'Здесь могли быть ваши условия, но их нет!';
+  checkForm: FormGroup;
+  loading: boolean;
 
   constructor(private fb: FormBuilder) {
   }
 
-  // get bic() {
-  //   return this.checkFormGroupControl.get('bic');
-  // }
-  //
-  // get paymentAccount() {
-  //   return this.checkFormGroupControl.get('paymentAccount');
-  // }
-  //
-  // get accept() {
-  //   return this.checkFormGroupControl.get('accept');
-  // }
+  get bic() {
+    return this.checkForm.get('bic');
+  }
+
+  get paymentAccount() {
+    return this.checkForm.get('paymentAccount');
+  }
+
+  get accept() {
+    return this.checkForm.get('accept');
+  }
 
   ngOnInit() {
-    this.checkFormGroupControl = this.fb.group({
-      bic: [null, [Validators.required, Validators.minLength(9)]],
-      paymentAccount: [null, [Validators.required, Validators.minLength(20)]],
+    this.checkForm = this.fb.group({
+      bic: ['', [Validators.required, validateBic]],
+      paymentAccount: ['', [Validators.required, validateRsFactory('bic')]],
       accept: [false, [Validators.required]]
     });
-    this.checkFormGroupControl.valueChanges.subscribe(console.log)
   }
-
-  // bicValidation(formControl: FormControl) {
-  //   if (formControl.value.length < 9) {
-  //     return {bicValidator: {message: 'Указан неверный номер счета!'}}
-  //   }
-  //   return null
-  // }
 
   onSubmit() {
-    console.log('submitted')
+    this.loading = true;
+    console.log(this.checkForm.value);
+    this.checkForm.reset();
   }
-
 }
