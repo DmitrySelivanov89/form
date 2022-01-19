@@ -5,6 +5,7 @@ import {AboutComponent} from "./pages/about/about.component";
 
 const routes: Routes = [
   {path: 'about', component: AboutComponent},
+  {path: 'check-form', component: CheckFormComponent},
   {path: '', component: CheckFormComponent},
 ];
 
